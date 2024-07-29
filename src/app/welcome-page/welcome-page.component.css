@@ -1,0 +1,26 @@
+.main-content {
+    padding: 20px;
+    background-color: black;
+  }
+  
+
+  .empty-img{
+
+  }
+  .central{
+    background-color: #f4f4f4;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .create-button {
+    background-color: #3498db;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  

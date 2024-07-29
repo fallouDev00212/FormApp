@@ -1,0 +1,9 @@
+<div class="carousel-container">
+    <div class="carousel" [@slideAnimation]="currentSlide">
+      <div class="slide" *ngFor="let image of images; let i = index" [ngClass]="{ 'active': i === currentSlide }">
+        <img [src]="image" alt="Image {{i + 1}}">
+         
+      </div>
+    </div>
+  </div>
+  

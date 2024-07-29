@@ -1,0 +1,40 @@
+.main-content {
+    padding: 10px;
+    /* height: 100%; */
+    display: flex;
+    margin-left: 30px;
+
+  }
+
+  .empty-img{
+
+    position: absolute;
+    margin-left: 33%;
+    margin-top: 13%;
+  }
+  
+  .content p{
+
+    color: black;
+    justify-content: center; 
+     align-items: center;
+     text-align: center;
+     margin-top: 100px;
+
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+     align-items: center
+  }
+  
+  .create-button {
+    background-color: #11c4e0;
+    border: none;
+    padding: 2px;
+    border-radius: 10px;
+    margin-left: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,100 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 0;
+    max-width: 1100px;
+    width: 80%;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .popup-content {
+    padding: 2.4em;
+  }
+  
+  .popup-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: 1px solid #e0e0e0; */
+    padding-bottom: 10px;
+    position: static;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .popup-content-wrapper {
+    margin-top: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .options-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 100%;
+  }
+  
+  .option-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em;
+    border: 1px solid #dadada;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 23%;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .option-item:hover {
+    border-color: #3b82f6;
+  }
+  
+  .option-item-icon {
+    width: 50px;
+    /* height: 50px;
+    background-color: #ccc;
+    margin-bottom: 10px; */
+  }
+  
+  .option-item-text h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+  
+  .option-item-text p {
+    margin: 0;
+    font-size: 14px;
+  }

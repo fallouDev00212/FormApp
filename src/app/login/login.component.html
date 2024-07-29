@@ -1,0 +1,40 @@
+<div class="tg">
+
+  <div class="container_anime">
+    <app-carousel></app-carousel>
+  </div>
+  
+
+  <div class="login-container">
+
+    <a href="home"><img class="logout" src="image/logout.png" alt=""></a>
+
+
+    <img   class="applogo"  src="image/formsapp-logo.svg" alt="">
+    <p>wellcome 👋</p>
+    <button class="login-btn google"> <img class="google_img" src="image/R.png" alt="">   S'IDENTIFIER AVEC GOOGLE    </button>
+    <button class="login-btn apple"><img class="apple_img" src="image/apple-logo.webp" alt="">   S'IDENTIFIER AVEC APPLE  </button>
+    <div class="or-divider">OU</div>
+
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="username">Nom d'utilisateur ou email</label>
+          <input class="form-control" type="text" id="username" [(ngModel)]="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input class="form-control" type="password" id="password" [(ngModel)]="password" name="password" required>
+        </div>
+        <div class="forgot-password">
+         
+        </div>
+        <button id="login-btn-2" type="submit" class="login-btn">  <a class="btn_connexion_go" href="/welcome">S'IDENTIFIER</a> </button>
+      </form>
+
+
+  </div>
+
+
+
+  </div>
+

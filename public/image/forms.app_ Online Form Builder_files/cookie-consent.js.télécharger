@@ -1,0 +1,754 @@
+let browserLang = navigator.language || navigator.userLanguage;
+browserLang = browserLang.split('-')[0];
+
+const translations = {
+	en: {
+		consentModal: {
+			title: 'Cookie Consent',
+			description: 'We use cookies to personalize your experience. You can change your preferences at any time, but note that blocking some cookies may impact your experience and our services.',
+			acceptAllBtn: 'Accept all cookies',
+			showPreferencesBtn: 'Manage preferences',
+			footer: '<a href="https://forms.app/en/cookie-policy" target="_blank">Cookie Policy</a>'
+		},
+		preferencesModal: {
+			title: 'Cookie Preferences',
+			acceptAllBtn: 'Accept all cookies',
+			acceptNecessaryBtn: 'Reject all',
+			savePreferencesBtn: 'Save preferences',
+			sections: [{
+				description: 'We use cookies to personalise and improve your experience. Please accept or manage your cookie settings. For more information here’s our ' + '<a href=https://forms.app/en/cookie-policy>Cookie Policy</a>'
+			},
+			{
+				title: 'Technical Cookies',
+				description: 'These cookies are strictly necessary to provide you with services available through our forms.app service and to use some of its features, such as access to secure areas. Because these cookies are strictly necessary to deliver the forms.app services, you can not refuse them without impacting how our forms.app function.',
+				linkedCategory: 'necessary'
+			},
+			{
+				title: 'Analytics Cookies',
+				description: 'These cookies collect information about how users use the website. Such cookies used to how effective our marketing campaigns are, or to help us customize our services and application for you in order to enchance your experience. These cookies may be set by us or by third-party providers whose services we have added to our pages.',
+				linkedCategory: 'analytics'
+			},
+			{
+				title: 'Marketing Cookies',
+				description: 'These cookies used to present advertisements/campaigns according to the interests of users and to measure the effectiveness of marketing activities.',
+				linkedCategory: 'ads'
+			},
+			{
+				title: 'Functional Cookies',
+				description: 'These cookies enable you to use forms.app more efficiently and provide a personalized experience. For example, it remembers user preferences such as language preferences and login information so you don\'t have to log in again. Functional Cookies protect user privacy while improving site features and do not collect personal data.',
+				linkedCategory: 'functional'
+			}
+			]
+		}
+	},
+	de: {
+		consentModal: {
+			title: 'Cookie-Einwilligung',
+			description: 'Wir verwenden Cookies, um Ihr Erlebnis zu personalisieren. Sie können Ihre Einstellungen jederzeit ändern. Beachten Sie jedoch, dass das Blockieren einiger Cookies Auswirkungen auf Ihr Erlebnis und unsere Dienste haben kann.',
+			acceptAllBtn: 'Akzeptieren Sie alle Cookies',
+			showPreferencesBtn: 'Einstellungen verwalten',
+			footer: '<a href="https://forms.app/de/cookie-richtlinie" target="_blank">Cookie-Richtlinie</a>'
+		},
+		preferencesModal: {
+			title: 'Cookie-Einstellungen',
+			acceptAllBtn: 'Akzeptieren Sie alle Cookies',
+			acceptNecessaryBtn: 'Alles ablehnen',
+			savePreferencesBtn: 'Einstellungen speichern',
+			sections: [{
+				description: 'Wir verwenden Cookies, um Ihre Erfahrung zu personalisieren und zu verbessern. Bitte akzeptieren oder verwalten Sie Ihre Cookie-Einstellungen. Weitere Informationen finden Sie hier in unserer' + '<a href=https://forms.app/de/cookie-richtlinie>Cookie-Richtlinie</a>'
+			},
+			{
+				title: 'Technische Cookies',
+				description: 'Diese Cookies sind unbedingt erforderlich, um Ihnen die über unseren forms.app-Dienst verfügbaren Dienste bereitzustellen und einige seiner Funktionen zu nutzen, z. B. den Zugriff auf sichere Bereiche. Da diese Cookies für die Bereitstellung der forms.app-Dienste unbedingt erforderlich sind, können Sie sie nicht ablehnen, ohne die Funktionsweise unserer forms.app zu beeinträchtigen.',
+				linkedCategory: 'necessary'
+			},
+			{
+				title: 'Analyse-Cookies',
+				description: 'Diese Cookies sammeln Informationen darüber, wie Benutzer die Website verwenden. Solche Cookies werden verwendet, um festzustellen, wie effektiv unsere Marketingkampagnen sind, oder um uns dabei zu helfen, unsere Dienste und Anwendungen für Sie anzupassen, um Ihre Erfahrung zu verbessern. Diese Cookies können von uns oder von Drittanbietern gesetzt werden, deren Dienste wir unseren Seiten hinzugefügt haben.',
+				linkedCategory: 'analytics'
+			},
+			{
+				title: 'Marketing-Cookies',
+				description: 'Diese Cookies werden verwendet, um Anzeigen/Kampagnen entsprechend den Interessen der Nutzer zu präsentieren und die Effektivität von Marketingaktivitäten zu messen.',
+				linkedCategory: 'ads'
+			},
+			{
+				title: 'Funktionale Cookies',
+				description: 'Diese Cookies ermöglichen Ihnen eine effizientere Nutzung von forms.app und bieten ein personalisiertes Erlebnis. Es merkt sich beispielsweise Benutzereinstellungen wie Spracheinstellungen und Anmeldeinformationen, sodass Sie sich nicht erneut anmelden müssen. Funktionale Cookies schützen die Privatsphäre der Benutzer, verbessern die Funktionen der Website und sammeln keine personenbezogenen Daten.',
+				linkedCategory: 'functional'
+			}
+			]
+		}
+	},
+	es: {
+		consentModal: {
+			title: 'Consentimiento de cookies',
+			description: 'Utilizamos cookies para personalizar su experiencia. Puede cambiar sus preferencias en cualquier momento, pero tenga en cuenta que bloquear algunas cookies puede afectar su experiencia y nuestros servicios.',
+			acceptAllBtn: 'Aceptar todas las cookies',
+			showPreferencesBtn: 'Administrar preferencias',
+			footer: '<a href="https://forms.app/es/politica-de-cookies target="_blank">Política de cookies</a>'
+		},
+		preferencesModal: {
+			title: 'Preferencias de cookies',
+			acceptAllBtn: 'Aceptar todas las cookies',
+			acceptNecessaryBtn: 'Rechazar todo',
+			savePreferencesBtn: 'Guardar preferencias',
+			sections: [{
+				description: 'Utilizamos cookies para personalizar y mejorar su experiencia. Acepte o gestione su configuración de cookies. Para más información aquí tienes nuestra' + '<a href=https://forms.app/es/politica-de-cookies>Política de cookies</a>'
+			},
+			{
+				title: 'Cookies Tecnicas',
+				description: 'Estas cookies son estrictamente necesarias para brindarle los servicios disponibles a través de nuestro servicio de forms.app y para usar algunas de sus funciones, como acceder a áreas seguras. Dado que estas cookies son estrictamente necesarias para proporcionar los servicios de forms.app, no puede rechazarlas sin afectar el funcionamiento de nuestros forms.app.',
+				linkedCategory: 'necessary'
+			},
+			{
+				title: 'Cookies Analíticas',
+				description: 'Estas cookies recopilan información sobre cómo los usuarios utilizan el sitio web. Dichas cookies se utilizan para determinar la eficacia de nuestras campañas de marketing o para ayudarnos a personalizar nuestros servicios y aplicaciones para usted a fin de mejorar su experiencia. Estas cookies pueden ser configuradas por nosotros o por terceros proveedores cuyos servicios hemos agregado a nuestras páginas.',
+				linkedCategory: 'analytics'
+			},
+			{
+				title: 'Cookies de Marketing',
+				description: 'Estas cookies se utilizan para presentar anuncios/campañas de acuerdo con los intereses de los usuarios y para medir la efectividad de las actividades de marketing.',
+				linkedCategory: 'ads'
+			},
+			{
+				title: 'Cookies Funcionales',
+				description: 'Estas cookies le permiten utilizar forms.app de manera más eficiente y brindar una experiencia personalizada. Por ejemplo, recuerda las preferencias del usuario, como las preferencias de idioma y la información de inicio de sesión, para que no tenga que iniciar sesión nuevamente. Las cookies funcionales protegen la privacidad del usuario al tiempo que mejoran las características del sitio y no recopilan datos personales.',
+				linkedCategory: 'functional'
+			}
+			]
+		}
+	},
+	fr: {
+		consentModal: {
+			title: 'Consentement aux cookies',
+			description: 'Nous utilisons des cookies pour personnaliser votre expérience. Vous pouvez modifier vos préférences à tout moment, mais notez que le blocage de certains cookies peut avoir un impact sur votre expérience et nos services.',
+			acceptAllBtn: 'Acceptez tous les cookies',
+			showPreferencesBtn: 'Gérer les préférences',
+			footer: '<a href="https://forms.app/fr/politique-relative-aux-cookies" target="_blank">Politique des cookies</a>'
+		},
+		preferencesModal: {
+			title: 'Préférences en matière de cookies',
+			acceptAllBtn: 'Acceptez tous les cookies',
+			acceptNecessaryBtn: 'Rejeter tout',
+			savePreferencesBtn: 'Enregistrer les préférences',
+			sections: [{
+				description: 'Nous utilisons des cookies pour personnaliser et améliorer votre expérience. Veuillez accepter ou gérer vos paramètres de cookies. Pour plus d\'informations, voici notre' + '<a href=https://forms.app/fr/politique-relative-aux-cookies>politique en matière de cookies</a>'
+			},
+			{
+				title: 'Cookies techniques',
+				description: 'Ces cookies sont strictement nécessaires pour vous fournir les services disponibles via notre service forms.app et pour utiliser certaines de ses fonctionnalités, telles que l\'accès à des zones sécurisées. Étant donné que ces cookies sont strictement nécessaires pour fournir les services de forms.app, vous ne pouvez pas les refuser sans affecter le fonctionnement de nos forms.app.',
+				linkedCategory: 'necessary'
+			},
+			{
+				title: 'Cookies analytiques',
+				description: 'Ces cookies collectent des informations sur la façon dont les utilisateurs utilisent le site Web. Ces cookies sont utilisés pour mesurer l\'efficacité de nos campagnes marketing ou pour nous aider à personnaliser nos services et notre application pour vous afin d\'améliorer votre expérience. Ces cookies peuvent être définis par nous ou par des fournisseurs tiers dont nous avons ajouté les services à nos pages.',
+				linkedCategory: 'analytics'
+			},
+			{
+				title: 'Cookies marketing',
+				description: 'Ces cookies sont utilisés pour présenter des publicités/campagnes en fonction des intérêts des utilisateurs et pour mesurer l\'efficacité des activités de marketing.',
+				linkedCategory: 'ads'
+			},
+			{
+				title: 'Cookies fonctionnels',
+				description: 'Ces cookies vous permettent d\'utiliser forms.app plus efficacement et d\'offrir une expérience personnalisée. Par exemple, il mémorise les préférences de l\'utilisateur telles que les préférences linguistiques et les informations de connexion afin que vous n\'ayez pas à vous reconnecter. Les cookies fonctionnels protègent la confidentialité des utilisateurs tout en améliorant les fonctionnalités du site et ne collectent pas de données personnelles.',
+				linkedCategory: 'functional'
+			}
+			]
+		}
+	},
+	hi: {
+		consentModal: {
+			title: 'कुकी सहमति',
+			description: 'हम आपके अनुभव को निजीकृत करने के लिए कुकीज़ का उपयोग करते हैं। आप किसी भी समय अपनी प्राथमिकताएँ बदल सकते हैं, लेकिन ध्यान रखें कि कुछ कुकीज़ को ब्लॉक करने से आपके अनुभव और हमारी सेवाओं पर असर पड़ सकता है। हमारी कुकी नीति में और जानें।',
+			acceptAllBtn: 'सभी कुकीज़ स्वीकार करें',
+			showPreferencesBtn: 'प्राथमिकताएँ प्रबंधित करें',
+			footer: '<a href="https://forms.app/hi/cookie-policy" target="_blank">कूकी नीति</a>'
+		},
+		preferencesModal: {
+			title: 'कुकी प्राथमिकताएँ',
+			acceptAllBtn: 'सभी कुकीज़ स्वीकार करें',
+			acceptNecessaryBtn: 'सभी को अस्वीकार करें',
+			savePreferencesBtn: 'प्राथमिकताएँ सहेजें',
+			sections: [{
+				description: 'हम आपके अनुभव को निजीकृत और बेहतर बनाने के लिए कुकीज़ का उपयोग करते हैं। कृपया अपनी कुकी सेटिंग को स्वीकार या प्रबंधित करें। अधिक जानकारी के लिए यहां हमारी कुकी नीति है'
+			},
+			{
+				title: 'तकनीकी कुकीज़',
+				description: 'ये कुकीज़ आपको हमारी forms.app सेवा के माध्यम से उपलब्ध सेवाएं प्रदान करने और इसकी कुछ सुविधाओं का उपयोग करने के लिए सख्ती से आवश्यक हैं, जैसे सुरक्षित क्षेत्रों तक पहुंच। क्योंकि ये कुकीज़ forms.app सेवाओं को वितरित करने के लिए कड़ाई से आवश्यक हैं, आप हमारे forms.app के कार्य को प्रभावित किए बिना उन्हें मना नहीं कर सकते।',
+				linkedCategory: 'necessary'
+			},
+			{
+				title: 'विश्लेषिकी कुकीज़',
+				description: 'ये कुकीज़ इस बारे में जानकारी एकत्र करती हैं कि उपयोगकर्ता वेबसाइट का उपयोग कैसे करते हैं। इस तरह की कुकीज़ का उपयोग हमारे मार्केटिंग अभियान कितने प्रभावी हैं, या आपके अनुभव को बढ़ाने के लिए हमारी सेवाओं और एप्लिकेशन को अनुकूलित करने में हमारी सहायता करने के लिए किया जाता है। ये कुकीज़ हमारे द्वारा या तृतीय-पक्ष प्रदाताओं द्वारा सेट की जा सकती हैं जिनकी सेवाओं को हमने अपने पृष्ठों में जोड़ा है।',
+				linkedCategory: 'analytics'
+			},
+			{
+				title: 'मार्केटिंग कुकीज़',
+				description: 'ये कुकीज़ उपयोगकर्ताओं के हितों के अनुसार विज्ञापन/अभियान प्रस्तुत करती थीं और विपणन गतिविधियों की प्रभावशीलता को मापने के लिए उपयोग की जाती थीं।',
+				linkedCategory: 'ads'
+			},
+			{
+				title: 'कार्यात्मक कुकीज़',
+				description: 'ये कुकीज़ आपको forms.app का अधिक कुशलता से उपयोग करने और व्यक्तिगत अनुभव प्रदान करने में सक्षम बनाती हैं। उदाहरण के लिए, यह उपयोगकर्ता की प्राथमिकताओं जैसे भाषा प्राथमिकताएं और लॉगिन जानकारी को याद रखता है ताकि आपको दोबारा लॉग इन न करना पड़े। कार्यात्मक कुकीज़ साइट सुविधाओं में सुधार करते हुए उपयोगकर्ता की गोपनीयता की रक्षा करती हैं और व्यक्तिगत डेटा एकत्र नहीं करती हैं।',
+				linkedCategory: 'functional'
+			}
+			]
+		}
+	},
+	id: {
+		consentModal: {
+			title: 'Persetujuan Kue',
+			description: 'Kami menggunakan cookie untuk mempersonalisasi pengalaman Anda. Anda dapat mengubah preferensi Anda kapan saja, namun perhatikan bahwa memblokir beberapa cookie dapat memengaruhi pengalaman Anda dan layanan kami.',
+			acceptAllBtn: 'Terima semua cookie',
+			showPreferencesBtn: 'Kelola preferensi',
+			footer: '<a href="https://forms.app/id/kebijakan-cookie" target="_blank">Kebijakan Cookie</a>'
+		},
+		preferencesModal: {
+			title: 'Preferensi Kue',
+			acceptAllBtn: 'Terima semua cookie',
+			acceptNecessaryBtn: 'Tolak semuanya',
+			savePreferencesBtn: 'impan preferensi',
+			sections: [{
+				description: 'Kami menggunakan cookie untuk mempersonalisasi dan meningkatkan pengalaman Anda. Harap terima atau kelola pengaturan cookie Anda. Untuk informasi lebih lanjut, inilah' + '<a href=https://forms.app/id/kebijakan-cookie>Kebijakan Cookie</a>' + 'kami'
+			},
+			{
+				title: 'Cookie Teknis',
+				description: 'Cookie ini sangat diperlukan untuk menyediakan layanan yang tersedia melalui layanan forms.app kami dan untuk menggunakan beberapa fiturnya, seperti akses ke area aman. Karena cookie ini sangat diperlukan untuk mengirimkan layanan forms.app, Anda tidak dapat menolaknya tanpa memengaruhi fungsi forms.app kami.',
+				linkedCategory: 'necessary'
+			},
+			{
+				title: 'Cookie Analytics',
+				description: 'Cookie ini mengumpulkan informasi tentang bagaimana pengguna menggunakan situs web. Cookie tersebut digunakan untuk seberapa efektif kampanye pemasaran kami, atau untuk membantu kami menyesuaikan layanan dan aplikasi kami untuk Anda guna meningkatkan pengalaman Anda. Cookie ini dapat diatur oleh kami atau oleh penyedia pihak ketiga yang layanannya telah kami tambahkan ke halaman kami.',
+				linkedCategory: 'analytics'
+			},
+			{
+				title: 'Cookie Pemasaran',
+				description: 'Cookies ini digunakan untuk menyajikan iklan/kampanye sesuai dengan minat pengguna dan untuk mengukur efektivitas kegiatan pemasaran.',
+				linkedCategory: 'ads'
+			},
+			{
+				title: 'Cookie Fungsional',
+				description: 'Cookie ini memungkinkan Anda menggunakan forms.app dengan lebih efisien dan memberikan pengalaman yang dipersonalisasi. Misalnya, ia mengingat preferensi pengguna seperti preferensi bahasa dan informasi login sehingga Anda tidak perlu login lagi. Cookie Fungsional melindungi privasi pengguna sekaligus meningkatkan fitur situs dan tidak mengumpulkan data pribadi.',
+				linkedCategory: 'functional'
+			}
+			]
+		}
+	},
+	pt: {
+		consentModal: {
+			title: 'Consentimento de cookies',
+			description: 'Usamos cookies para personalizar sua experiência. Você pode alterar suas preferências a qualquer momento, mas observe que o bloqueio de alguns cookies pode afetar sua experiência e nossos serviços.',
+			acceptAllBtn: 'Aceite todos os cookies',
+			showPreferencesBtn: 'Gerenciar preferências',
+			footer: '<a href="https://forms.app/pt/politica-de-cookies" target="_blank">Política de cookies</a>'
+		},
+		preferencesModal: {
+			title: 'Preferências de cookies',
+			acceptAllBtn: 'Aceite todos os cookies',
+			acceptNecessaryBtn: 'Rejeitar tudo',
+			savePreferencesBtn: 'Salvar preferências',
+			sections: [{
+				description: 'Usamos cookies para personalizar e melhorar sua experiência. Aceite ou gerencie suas configurações de cookies. Para mais informações aqui está nossa' + '<a href=https://forms.app/pt/politica-de-cookies>Política de cookies</a>'
+			},
+			{
+				title: 'Cookies técnicos',
+				description: 'Estes cookies são estritamente necessários para lhe fornecer serviços disponíveis através do nosso serviço forms.app e para utilizar algumas das suas funcionalidades, como o acesso a áreas seguras. Como esses cookies são estritamente necessários para fornecer os serviços do forms.app, você não pode recusá-los sem afetar o funcionamento do nosso forms.app.',
+				linkedCategory: 'necessary'
+			},
+			{
+				title: 'Cookies de análise',
+				description: 'Esses cookies coletam informações sobre como os usuários usam o site. Esses cookies são usados ​​para avaliar a eficácia de nossas campanhas de marketing ou para nos ajudar a personalizar nossos serviços e aplicativos para você, a fim de melhorar sua experiência. Esses cookies podem ser configurados por nós ou por provedores terceirizados cujos serviços adicionamos às nossas páginas.',
+				linkedCategory: 'analytics'
+			},
+			{
+				title: 'Cookies de análise',
+				description: 'Esses cookies coletam informações sobre como os usuários usam o site. Esses cookies são usados ​​para avaliar a eficácia de nossas campanhas de marketing ou para nos ajudar a personalizar nossos serviços e aplicativos para você, a fim de melhorar sua experiência. Esses cookies podem ser configurados por nós ou por provedores terceirizados cujos serviços adicionamos às nossas páginas.',
+				linkedCategory: 'ads'
+			},
+			{
+				title: 'Cookies funcionais',
+				description: 'Esses cookies permitem que você use o forms.app com mais eficiência e forneça uma experiência personalizada. Por exemplo, ele lembra as preferências do usuário, como preferências de idioma e informações de login, para que você não precise fazer login novamente. Os Cookies Funcionais protegem a privacidade do utilizador ao mesmo tempo que melhoram as funcionalidades do site e não recolhem dados pessoais.',
+				linkedCategory: 'functional'
+			}
+			]
+		}
+	},
+	ru: {
+		consentModal: {
+			title: 'Согласие на файлы cookie',
+			description: 'Мы используем файлы cookie, чтобы персонализировать ваш опыт. Вы можете изменить свои предпочтения в любое время, но учтите, что блокировка некоторых файлов cookie может повлиять на ваш опыт и наши услуги. Узнайте больше в нашей Политике использования файлов cookie.',
+			acceptAllBtn: 'Принять все файлы cookie',
+			showPreferencesBtn: 'Управление настройками',
+			footer: '<a href="https://forms.app/ru/cookie-policy" target="_blank">Политика Cookie</a>'
+		},
+		preferencesModal: {
+			title: 'Настройки файлов cookie',
+			acceptAllBtn: 'Принять все файлы cookie',
+			acceptNecessaryBtn: 'Отклонить все',
+			savePreferencesBtn: 'Сохранить настройки',
+			sections: [{
+				description: 'Мы используем файлы cookie, чтобы персонализировать и улучшить ваш опыт. Примите или измените настройки файлов cookie. Для получения дополнительной информации ознакомьтесь с нашей Политикой в ​​отношении файлов cookie.'
+			},
+			{
+				title: 'Технические файлы cookie',
+				description: 'Эти файлы cookie необходимы для предоставления вам услуг, доступных через наш сервис forms.app, и для использования некоторых его функций, таких как доступ к защищенным областям. Поскольку эти файлы cookie строго необходимы для предоставления услуг forms.app, вы не можете отказаться от них, не влияя на работу нашего forms.app.',
+				linkedCategory: 'necessary'
+			},
+			{
+				title: 'Аналитические файлы cookie',
+				description: 'Эти файлы cookie собирают информацию о том, как пользователи используют веб-сайт. Такие файлы cookie используются для определения эффективности наших маркетинговых кампаний или для того, чтобы помочь нам настроить наши услуги и приложения для вас, чтобы улучшить ваш опыт. Эти файлы cookie могут быть установлены нами или сторонними поставщиками, услуги которых мы добавили на наши страницы.',
+				linkedCategory: 'analytics'
+			},
+			{
+				title: 'Маркетинговые файлы cookie',
+				description: 'Эти файлы cookie используются для представления рекламы/кампаний в соответствии с интересами пользователей и для измерения эффективности маркетинговой деятельности.',
+				linkedCategory: 'ads'
+			},
+			{
+				title: 'Функциональные файлы cookie',
+				description: 'Эти файлы cookie позволяют вам использовать forms.app более эффективно и обеспечивают персонализированный опыт. Например, он запоминает пользовательские настройки, такие как языковые настройки и данные для входа, поэтому вам не придется входить в систему снова. Функциональные файлы cookie защищают конфиденциальность пользователей, одновременно улучшая функции сайта и не собирая личные данные.',
+				linkedCategory: 'functional'
+			}
+			]
+		}
+	},
+	tr: {
+		consentModal: {
+			title: 'Çerez Onayı',
+			description: 'Deneyiminizi kişiselleştirmek için çerezleri kullanıyoruz. Tercihlerinizi istediğiniz zaman değiştirebilirsiniz ancak bazı çerezlerin engellenmesinin deneyiminizi ve hizmetlerimizi etkileyebileceğini unutmayın.',
+			acceptAllBtn: 'Tüm çerezleri kabul et',
+			showPreferencesBtn: 'Tercihleri yönet',
+			footer: '<a href="https://forms.app/tr/cerez-politikasi" target="_blank">Çerez politikası</a>'
+		},
+		preferencesModal: {
+			title: 'Çerez Tercihleri',
+			acceptAllBtn: 'Tüm çerezleri kabul et',
+			acceptNecessaryBtn: 'Tümünü reddet',
+			savePreferencesBtn: 'Tercihleri kaydet',
+			sections: [{
+				description: 'Deneyiminizi iyileştirmek ve kişiselleştirmek için çerezler kullanıyoruz. Çerezleri kabul edebilir veya tercihlerinizi yönetebilirsiniz. Daha fazla bilgi için ' + '<a href=https://forms.app/tr/cerez-politikasi>Çerez politikası</a>'
+			},
+			{
+				title: 'Teknik Çerezler',
+				description: 'İnternet sitesinin kullanımı ve işlerliği için gerekli olan çerezlerdir. Güvenliğiniz ve hizmetlerimiz için teknik olarak zorunlu olduğundan bu çerezleri devre dışı bırakamazsınız.',
+				linkedCategory: 'necessary'
+			},
+			{
+				title: 'Analitik Çerezleri',
+				description: 'Analiz çerezleri kullanıcıların internet sitesini nasıl kullandıkları hakkında bilgi toplar. Bu tür çerezler kullanıcı deneyimlerini iyileştirmek amacıyla kullanılan çerezlerdir. Bu çerezler, bizim tarafımızdan veya tarafımızca kullanılan üçüncü parti servis sağlayıcılar tarafından sağlanabilir.',
+				linkedCategory: 'analytics'
+			},
+			{
+				title: 'Pazarlama Çerezleri',
+				description: 'Kullanıcıların ilgi alanlarına göre reklam/kampanyaların sunulması ve pazarlama çalışmalarının etkinliğini ölçmek amacıyla kullanılan çerezlerdir.',
+				linkedCategory: 'ads'
+			},
+			{
+				title: 'Fonksiyonel Çerezler',
+				description: 'Bu çerezler, forms.app\'i daha verimli kullanmanızı sağlar ve kişiselleştirilmiş bir deneyim sunar. Örneğin, dil tercihleri ve oturum açma bilgileri gibi kullanıcı tercihlerini hatırlar, böylece tekrar oturum açmanıza gerek kalmaz. Fonksiyonel Çerezler, site özelliklerini geliştirirken kullanıcı gizliliğini korur ve kişisel veri toplamaz.',
+				linkedCategory: 'functional'
+			}
+			]
+		}
+	},
+	zh: {
+		consentModal: {
+			title: 'Cookie 同意',
+			description: '我们使用 cookie 来个性化您的体验。 您可以随时更改您的偏好设置，但请注意，阻止某些 Cookie 可能会影响您的体验和我们的服务。 了解更多信息，请参阅我们的 Cookie 政策。',
+			acceptAllBtn: '接受所有cookie',
+			showPreferencesBtn: '管理偏好设置',
+			footer: '<a href="https://forms.app/zh/cookie-policy" target="_blank">Cookie政策</a>'
+		},
+		preferencesModal: {
+			title: 'Cookie 偏好设置',
+			acceptAllBtn: '接受所有cookie',
+			acceptNecessaryBtn: '全部拒绝',
+			savePreferencesBtn: '保存首选项',
+			sections: [{
+				description: '我们使用 cookie 来个性化和改善您的体验。请接受或管理您的 cookie 设置。如需更多信息，请参阅我们的' + '<a href=https://forms.app/zh/cookie-policy>Cookie政策</a>'
+			},
+			{
+				title: '技术饼干',
+				description: '这些 cookie 是为您提供通过我们的 forms.app 服务提供的服务以及使用其某些功能（例如访问安全区域）所必需的。由于这些 cookie 是提供 forms.app 服务所必需的，因此您不能拒绝它们而不影响我们的 forms.app 功能。',
+				linkedCategory: 'necessary'
+			},
+			{
+				title: '分析 Cookie',
+				description: '这些 cookie 收集有关用户如何使用网站的信息。此类 cookie 用于我们的营销活动的有效性，或帮助我们为您定制我们的服务和应用程序以增强您的体验。这些 cookie 可能由我们或我们已将其服务添加到我们页面的第三方提供商设置。',
+				linkedCategory: 'analytics'
+			},
+			{
+				title: '营销饼干',
+				description: '这些 cookie 用于根据用户的兴趣展示广告/活动并衡量营销活动的有效性。',
+				linkedCategory: 'ads'
+			},
+			{
+				title: '功能性饼干',
+				description: '这些 cookie 使您能够更有效地使用 forms.app 并提供个性化体验。 例如，它会记住用户首选项，例如语言首选项和登录信息，因此您无需再次登录。 功能性 Cookie 在改进网站功能的同时保护用户隐私，并且不收集个人数据。',
+				linkedCategory: 'functional'
+			}
+			]
+		}
+	}
+};
+
+if (!translations[`${browserLang}`]) {
+	browserLang = 'en';
+}
+
+function cookieConsentConfig (onConsentCallback, lang, event) {
+	let categories = {
+		necessary: {
+			readOnly: true,
+			enabled: true
+		},
+		analytics: {
+			autoClear: {
+				cookies: [{
+					name: 'SAPISID'
+				},
+				{
+					name: '__Host-3PLSID'
+				},
+				{
+					name: 'SID'
+				},
+				{
+					name: '__Host-1PLSID'
+				},
+				{
+					name: 'LSID'
+				},
+				{
+					name: 'ACCOUNT_CHOOSER'
+				},
+				{
+					name: '__Secure-1PSID'
+				},
+				{
+					name: 'SIDCC'
+				},
+				{
+					name: '__Secure-3PSIDCC'
+				},
+				{
+					name: '__Host-GAPS'
+				},
+				{
+					name: 'HSID'
+				},
+				{
+					name: '1P_JAR'
+				},
+				{
+					name: '_gac_UA-123158574-1'
+				},
+				{
+					name: '_ga'
+				},
+				{
+					name: '_fbp'
+				},
+				{
+					name: '_gid'
+				},
+				{
+					name: '_ga_'
+				},
+				{
+					name: '_ga_BY4EGTPHRR'
+				},
+				{
+					name: '_ga_KNDFS1XWFR'
+				},
+				{
+					name: 'AnalyticsSyncHistory'
+				},
+				{
+					name: 'UserMatchHistory'
+				},
+				{
+					name: 'bcookie'
+				},
+				{
+					name: 'li_sugr'
+				},
+				{
+					name: '_hjFirstSeen'
+				},
+				{
+					name: '_ga_740JKHV4FZ'
+				},
+				{
+					name: '_hjIncludedInSessionSample_3418101'
+				},
+				{
+					name: '_hjSessionUser_3418101'
+				},
+				{
+					name: '_hjAbsoluteSessionInProgress'
+				},
+				{
+					name: '_hjSession_3418101'
+				},
+				{
+					name: 'fa-v'
+				},
+				{
+					name: 'OptanonConsent'
+				},
+				{
+					name: '_hjHasCachedUserAttributes'
+				},
+				{
+					name: 'XDOMAIN-LOGGED-IN'
+				},
+				{
+					name: '_scid'
+				},
+				{
+					name: 'ajs_user_id'
+				},
+				{
+					name: 'ajs_anonymous_id'
+				},
+				{
+					name: '_scid_r'
+				},
+				{
+					name: '_gac_UA-51401671-1'
+				},
+				{
+					name: 'utm_params'
+				},
+				{
+					name: '_BEAMER_USER_ID_zeKLgqli17986'
+				},
+				{
+					name: '_hjSessionUser_14'
+				},
+				{
+					name: 'NEXT_LOCALE'
+				},
+				{
+					name: '_cs_c'
+				},
+				{
+					name: '_BEAMER_FIRST_VISIT_zeKLgqli17986'
+				},
+				{
+					name: '_cs_id'
+				},
+				{
+					name: '_session_id'
+				},
+				{
+					name: '__cf_bm'
+				},
+				{
+					name: '_dc_gtm_UA-123158574-1'
+				},
+				{
+					name: '_ga_YMG397QK6S'
+				},
+				{
+					name: 'intercom-device-id-tt7hkkgs'
+				},
+				{
+					name: 'intercom-session-tt7hkkgs'
+				}
+				],
+				reloadPage: true
+			}
+		},
+		ads: {
+			autoClear: {
+				cookies: [{
+					name: '__Secure-1PAPISID'
+				},
+				{
+					name: 'APISID'
+				},
+				{
+					name: 'SSID'
+				},
+				{
+					name: '__Secure-3PSID'
+				},
+				{
+					name: '__Secure-1PSID'
+				},
+				{
+					name: 'sb'
+				},
+				{
+					name: 'IDE'
+				},
+				{
+					name: 'NID'
+				},
+				{
+					name: '_gcl_aw'
+				},
+				{
+					name: '_fbc'
+				},
+				{
+					name: '_gcl_au'
+				},
+				{
+					name: 'datr'
+				},
+				{
+					name: 'MUID'
+				},
+				{
+					name: 'MSPTC'
+				},
+				{
+					name: '_uetvid'
+				},
+				{
+					name: '_uetsid'
+				},
+				{
+					name: 'DV'
+				}
+				],
+				reloadPage: true
+			}
+		},
+		functional: {
+			autoClear: {
+				cookies: [{
+					name: 'intercom-id-tt7hkkgs'
+				},
+				{
+					name: 'lidc'
+				},
+				{
+					name: 'AEC'
+				},
+				{
+					name: 'li_gc'
+				}
+				],
+				reloadPage: true
+			}
+		}
+	};
+	return {
+		guiOptions: {
+			consentModal: {
+				layout: 'box inline',
+				position: 'bottom right'
+			},
+			preferencesModal: {
+				layout: 'box',
+				equalWeightButtons: false
+			}
+		},
+		page_scripts: true,
+		categories: categories,
+		cookie: {
+			name: 'cc_cookie',
+			domain: location.hostname,
+			expiresAfterDays: 365,
+			useLocalStorage: true
+			// path: '/'
+			// sameSite: "Lax",
+		},
+		language: {
+			default: lang || browserLang,
+			translations: translations
+		},
+		autoShow: true,
+		onModalShow: () => {
+			window.faDataLayer = window.faDataLayer || [];
+			window.faDataLayer.push({
+				eventName: 'user_behaviour',
+				label: 'view',
+				path: window.location.pathname,
+				...event
+			});
+		},
+		onFirstConsent: ({
+			cookie
+		}) => {
+			const cookieCategories = Object.keys(categories);
+
+			let eventModel = {
+				eventName: 'user_behaviour',
+				label: 'permissions',
+				path: window.location.pathname,
+				...event
+			};
+			window.faDataLayer = window.faDataLayer || [];
+
+			let categoryAccept = cookie.categories.length === 1 ? 0 : cookie.categories.length === cookieCategories.length ? 1 : null;
+
+			if (categoryAccept != null) {
+				window.faDataLayer.push({
+					...eventModel,
+					action: 'accept',
+					value: categoryAccept
+				});
+			} else {
+				// 1den başlama sebebi her zaman necessary kategorisi ilk item oluyor ve onunla ilgili event atılmayacak
+				for (let i = 1; i < cookieCategories.length; i++) {
+					let category = cookieCategories[i];
+					window.faDataLayer.push({
+						...eventModel,
+						action: category,
+						value: cookie.categories.indexOf(category) !== -1 ? 1 : 0
+					});
+				}
+			}
+		},
+		onConsent: ({
+			cookie
+		}) => {
+			let consentCategory = {
+				'ad_user_data': 'ads',
+				'ad_personalization': 'ads',
+				'ad_storage': 'ads',
+				'analytics_storage': 'analytics',
+				'functionality_storage': 'functional'
+			};
+
+			let accepted = {};
+
+			for (let category in consentCategory) {
+				if (cookie.categories.includes(consentCategory[category])) {
+					accepted[category] = 'granted';
+				}
+			}
+
+			if (!window.gtag) {
+				window.dataLayer = window.dataLayer || [];
+				window.gtag = function () {
+					window.dataLayer.push(arguments);
+				};
+			}
+
+			if (Object.keys(accepted).length) {
+				window.gtag('consent', 'update', accepted);
+				window.dataLayer = window.dataLayer || [];
+				window.dataLayer.push({
+					event: 'consent_changed'
+				});
+			}
+
+			onConsentCallback();
+		}
+	};
+}
+
+const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = '/static/cookie-consent.css';
+document.head.appendChild(link);
+
+link.onload = () => window.CookieConsent.onLoadConsent();

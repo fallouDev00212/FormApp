@@ -1,0 +1,58 @@
+.container {
+    /* max-width: 400px; */
+    margin: auto;
+    padding: 20px;
+
+    border-radius: 10px;
+  }
+  .applogo{
+ 
+
+    margin-left: 38%;
+    
+  }
+
+  .logout{
+    width: 30px;
+    margin-top: 12px;
+  }
+  .texte_para{
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #00bfff;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #007fff;
+  }
+  
+  a {
+    color: #00bfff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }

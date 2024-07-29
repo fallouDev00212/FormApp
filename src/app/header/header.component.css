@@ -1,0 +1,40 @@
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .login-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .avatar{
+    width: 50px;
+  }
+  .banner {
+ 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .offer {
+    font-size: 14px;
+  }
+  
+  .view-plans {
+    background-color: #2ecc71;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

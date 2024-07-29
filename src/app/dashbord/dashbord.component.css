@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    
+  }
+  
+  .centrale{
+    background-color: #f4f4f4;
+
+  }
+
+  .centger2{
+
+    width: 100%;
+    background-color: white;
+ 
+  }
+  .logoutbtn{
+    float: right;
+  }
+  .applogo{
+    padding: 5px;
+  }
+  .sidebar {
+    width: 200px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  .sidebar li a {
+
+  text-decoration: none;
+  color: black;
+  }
+
+  .sidebar li a:hover {
+
+    background-color: rgb(9, 142, 214);
+    padding: 7px;
+    border-radius: 10px;
+    transition: 0.2s;
+    }
+
+
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card p {
+    padding: 10px;
+  }
+  
+  .sidebar li a.active {
+    background-color: #007BFF; /* Couleur bleu océan */
+    color: white;
+    border-radius: 4px;
+    padding: 8px;
+  }
